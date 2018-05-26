@@ -52,8 +52,8 @@ public class BTree<K extends Comparable, V>
         return btNode;
     }
 
-
     //
+    // This is where Searching algorithm starts, Maya Mam.
     // Search value for a specified key of the tree
     //
     public V search(K key) {
@@ -80,7 +80,6 @@ public class BTree<K extends Comparable, V>
                 return currentKey.mValue;
             }
 
-            // We don't need it
             /*
             if (currentNode.mIsLeaf) {
                 return null;
@@ -98,8 +97,8 @@ public class BTree<K extends Comparable, V>
         return null;
     }
 
-
     //
+    // This is where Insertion algorithm starts, Maya Mam.
     // Insert key and its value into the tree
     //
     public BTree insert(K key, V value) {
@@ -265,9 +264,10 @@ public class BTree<K extends Comparable, V>
         ++(parentNode.mCurrentKeyNum);
     }
 
-
     //
-    // Find the predecessor node for a specified node
+    // This is where Deletion algorithm starts, Maya Mam.
+    // After (currently) 8 helper functions, the algo given in the pseudo code sheet begins
+    // This function Find the predecessor node for a specified node
     //
     private BTNode<K, V> findPredecessor(BTNode<K, V> btNode, int nodeIdx) {
         if (btNode.mIsLeaf) {
